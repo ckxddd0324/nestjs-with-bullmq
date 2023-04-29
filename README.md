@@ -71,3 +71,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## add redis
+
+- docker run --name my_local_redis -p 6379:6379 -d redis
+- docker start my_local_redis
+- docker exec -it my_local_redis redis-cli

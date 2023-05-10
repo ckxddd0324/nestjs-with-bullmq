@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
+    "start:dev": "export NODE_DEBUG=bull && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -20,11 +20,17 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@bull-board/api": "^5.1.2",
+    "@bull-board/express": "^5.1.2",
     "@nestjs/bull": "^0.6.3",
+    "@nestjs/bullmq": "^1.1.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/event-emitter": "^1.4.1",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/websockets": "^9.4.0",
     "bull": "^4.10.4",
+    "bullmq": "^3.12.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
